@@ -1,0 +1,23 @@
+<?php 
+if($block->isCountdownEnabled() && $block->getPriceCountDown())
+{
+?>
+<div class="title"><?php echo $block->getTile(); ?></div>
+<div id="countdowntimer" class="countdowntimer"><span id="future_date"><span></div>
+ <script>
+	require([
+		'jquery',
+		'Emizentech_Countdown/js/jquery.countdownTimer'
+	], function ($) {
+		console.log('countdowntimer start');
+		jQuery("#future_date").countdowntimer({
+			startDate : "<?php echo date('Y/m/d H:i:s'); ?>",
+			dateAndTime : "<?php echo str_replace('-','/',$block->getCountdownEndDate()); ?>",
+			size : "lg",
+			regexpMatchFormat: "([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2}):([0-9]{1,2})",
+// 			regexpReplaceWith: "$1 days $2 hours $3 minutes $4 seconds REMAINING"        
+			regexpReplaceWith: "$1<sup>days</sup> / $2<sup>hours</sup> / $3<sup>minutes</sup> / $4<sup>seconds</sup>"
+	    });    
+	});
+</script>
+<?php } ?>

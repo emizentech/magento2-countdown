@@ -1,0 +1,46 @@
+.colorDefinition {
+    color : #ff6b5a;
+}
+
+.size_xl {
+   font-size:50px;
+   border-width: 8px;
+   border-radius: 6px;
+}
+
+.size_lg {font-size:18px; text-transform: uppercase;}
+
+.size_md {
+   font-size:30px;
+   border-width: 5px;
+   border-radius: 4px;
+}
+
+.size_sm {
+   font-size:20px;
+   border-width: 3px;
+   border-radius: 3px;
+}
+
+.size_xs {
+   font-size:15px;
+   border-width: 2px;
+   border-radius: 2px;
+}
+
+.title {
+  color: #575757;
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 3px;
+  text-transform: uppercase;
+}
+#countdowntimer{
+	border-radius: 10px;
+    border-width: 5px;
+    border-color: black;
+    border-style: solid;
+    padding: 5px;
+    text-align:center;
+    background-color: #575757;
+}
